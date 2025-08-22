@@ -94,3 +94,36 @@ func Delete_value(head *ListNode, val int) *ListNode {
 }
 
 // 删除指定索引，指定位置
+func Delete_at_index(head *ListNode, index int) *ListNode {
+	dummy := &ListNode{Val: index}
+	cur := dummy
+	// 找到删除节点的前一个结点
+	for i := 0; i < index && cur.Next != nil; i++ {
+		cur = cur.Next
+	}
+	if cur.Next == nil {
+		cur.Next = cur.Next.Next
+	}
+	return dummy.Next
+}
+
+// 反转链表
+func Reverse_Linklist(head *ListNode) *ListNode {
+	// 三个指针： pre cur next
+	/*
+		1.初始化next
+		2.将 cur 的下一个位置指向 pre
+		3.pre 重新赋值为 cur
+		4.cur 赋值为 next
+	*/
+	var pre *ListNode = nil
+	cur := head
+	for cur != nil {
+		next := cur.Next
+		cur.Next = pre
+		pre = cur
+		cur = next
+	}
+	return pre
+
+}
