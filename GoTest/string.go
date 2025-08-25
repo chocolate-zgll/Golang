@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-func slices_func() {
+func Slices_func() {
 	/*
 		slices常用函数
 	*/
@@ -38,7 +38,7 @@ func slices_func() {
 	fmt.Println(nums)
 	fmt.Println("Hello World")
 }
-func math_func() {
+func Math_func() {
 	/*
 		math常用函数
 	*/
@@ -51,7 +51,7 @@ func math_func() {
 	fmt.Println("返回不小于x的最小整数", math.Ceil(x))
 	fmt.Println("返回不大于x的最大整数", math.Floor(x))
 }
-func string_func() {
+func String_func() {
 	/*
 		字符串基本操作
 	*/
@@ -69,7 +69,7 @@ func string_func() {
 
 }
 
-func for_func() {
+func For_func() {
 	str1 := "ABCDEFG"
 	// 对应ASCII表
 	for i := 0; i < len(str1); i++ {
@@ -82,7 +82,7 @@ func for_func() {
 	}
 }
 
-func string2_func() {
+func String2_func() {
 	/*
 		字符串切片操作
 	*/
@@ -105,7 +105,7 @@ func string2_func() {
 	fmt.Println(strconv.Itoa(int_to_str))
 
 }
-func slice2() {
+func Slice2() {
 	l := [...]int{1, 2, 3, 4, 5, 6, 7, 8, 9}
 	fmt.Println(len(l))
 	fmt.Println(cap(l))
@@ -117,7 +117,7 @@ func slice2() {
 数据结构与算法
 */
 
-func map_func() {
+func Map_func() {
 	/*
 		哈希表、字典操作
 	*/
@@ -152,10 +152,4 @@ func map_func() {
 		fmt.Println("键：", k, "值：", v)
 	}
 	// 字典的线程是不安全的，在写入字典时需要加锁
-
-}
-func main() {
-	//string2_func()
-	//slice2()
-
 }
